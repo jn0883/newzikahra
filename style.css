@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Michroma&display=swap");
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+
+.main{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(https://images.unsplash.com/photo-1458698671475-c63a6eb79667?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: top;
+}
+/*------------loading page------------*/
+.loading-page {
+    font-family: "Michroma", sans-serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    color: #191654;
+  }
+  
+  #svg {
+    height: 150px;
+    width: 150px;
+    stroke: white;
+    fill-opacity: 0;
+    stroke-width: 3px;
+    stroke-dasharray: 4500;
+    animation: draw 8s ease;
+  }
+  
+  @keyframes draw {
+    0% {
+      stroke-dashoffset: 4500;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  .name-container {
+    height: 30px;
+    overflow: hidden;
+  }
+  
+  .logo-name {
+    color: #fff;
+    font-size: 20px;
+    letter-spacing: 12px;
+    text-transform: uppercase;
+    margin-left: 20px;
+    font-weight: bolder;
+  }
+
+
+/*.main img{
+    width: 100vw; 
+    object-fit: cover;
+    object-position: top;
+}*/
+/*-------navbar------------*/
+.navbar{
+    width: 100%;
+    height: 6%;
+    padding: 1.3rem;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    list-style-type: none;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+
+}
+
+ul > li {
+    list-style-type: none;
+}
+
+.navlinks{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+/*---------main-----------*/
+.intro{
+    top: 11%;
+    font-size: 1.5rem;
+    position: absolute;
+    color: white;
+    text-align: center;
+    font-weight: 100;
+    line-height: 264%;
+}
+
+.intro h4{
+    margin-bottom: 0;
+}
+
+.intro h1{
+    font-size: 4em;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+.searchbar{
+    background: #fff;
+    width: 55%;
+    margin: 30px auto;
+    padding: 6px 10px 6px 30px;
+    border-radius: 50px;
+    height: 10%;
+    position: absolute;
+    top:35%;
+}
+
+.searchbar form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.searchbar form input{
+    display: block;
+    border: 0;
+    outline: none;
+    background: transparent;
+}
+
+.searchbar form button{
+    background: rgb(2, 183, 255);
+    color: white;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+}
+
+.searchbar .locationinput{
+    flex: 1;
+}
+
+.searchbar form label{
+    font-weight: 600;
+}
+
+/*-----------top rated treks-------*/
+
+.trends{
+    width: 85%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.trends .row{
+    margin-top: 5rem;
+    display: flex;
+    gap: 22px;
+}
+
+.trend_col{
+    height: 70vh;
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.trend_col img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.layer:hover{
+    background: rgba(226, 0, 0, 0.7);
+}
+
+.layer h3{
+    width: 100%;
+    font-weight: 800;
+    color: #fff;
+    font-size: 2rem;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+/*-----------features-------------*/
+#features{
+    margin-top: 4rem;
+    height: 135vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#features .col{
+    height: 19rem;
+    width: 19rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border:2px solid black;
+    padding:0.25rem;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#features .container{
+    margin-top: 5rem;
+}
+#features .row{
+    display: flex;
+    gap:3rem
+}
+
+#features .row .col .icon{
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+.featureslayer{
+    background: transparent;
+    position: absolute;
+    height: 20%;
+    width: 100%;
+}
+
+#features .col:hover{
+    background: rgba(226, 0, 211, 0.7);
+}
+
+*/
+.featureslayer {
+    background: transparent;
+    position: absolute;
+    height: 7%;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    transition: transform 0.25s ease, background 0.25s ease;
+    transform: translateY(100%);
+}
+
+#features .col:hover .featureslayer {
+    transform: translateY(0); 
+    background: rgba(207, 3, 193, 0.7);
+    height: 7%;
+}
+    
+
+
+
+/*-------------cta-----------------*/
+#cta{
+    margin: 5rem 80px;
+    background-image: linear-gradient(to right, #3f2321, transparent),url(https://images.unsplash.com/photo-1617284101128-4b2025d00c55?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    padding: 5%;
+    color: white;
+}
+
+#cta h1{
+    font-size: 4vw;
+    line-height: 5.3vw;
+    font-weight: 500;
+}
+
+#cta p{
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/*------------contact us-------------*/
+#contactus{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.contact_col{
+    flex-basis: 48%;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+#contactus .row{
+    margin-top: 5rem;
+    display: flex;
+}
+
+.contact_col div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact_col div .fa{
+    font-size: 28px;
+    color: rgb(82, 46, 3);
+    margin: 10px;
+    margin-right: 30px;
+}
+
+.contact_col div p{
+    padding: 0;
+}
+
+.contact_col div h5{
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: 400;
+}
+
+.contact_col input,.contact_col textarea{
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 17px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+.contact_col button{
+    padding: 0.5rem;
+    height: 3rem;
+    width: 10rem;
+    color: rgb(82, 46, 3);
+}
+
+
+/*-----------------------------------places page----------------------------------------*/
+.destination-cont{
+    height: 80vh;
+    width: 94%;
+    margin: 2rem 3rem 5rem;
+    background-image: linear-gradient(to right, #42a161, transparent),url(https://images.unsplash.com/photo-1584043760783-561c60c88e7c?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center 30%;
+    border-radius: 10px;
+    padding: 5%;
+    color: white;
+    text-align:left;
+}
+
+.destination-cont h1{
+    font-size: 4vw;
+    line-height: 5.3vw;
+    font-weight: 500;
+}
+
+.destination-cont p{
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.info .map{
+    height: 80vh;
+    width: 94%;
+    margin: 2rem 3rem 5rem;
+
+}
